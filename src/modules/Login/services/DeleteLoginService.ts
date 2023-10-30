@@ -10,7 +10,7 @@ class DeleteLoginService {
     private loginRepository: ILoginRepository
   ) {}
   public async execute(id: string): Promise<void> {
-    const findLogin= await this.loginRepository.findById(id);
+    const findLogin = await this.loginRepository.findById(id);
 
     if (!findLogin) {
       throw new AppError("Autenticação não encontrada!!", 404);

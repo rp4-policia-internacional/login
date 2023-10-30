@@ -1,4 +1,4 @@
-import loginRoutes from "@modules/Login/infra/http/routes/Resgate.routes";
+import loginRoutes from "@modules/Login/infra/http/routes/Login.routes";
 
 import { Router } from "express";
 const routes = Router();

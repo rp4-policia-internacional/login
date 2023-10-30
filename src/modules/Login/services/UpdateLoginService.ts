@@ -1,6 +1,5 @@
 import { inject, injectable } from "tsyringe";
 import AppError from "@shared/Errors/AppError";
-;
 import LoginEntity from "../entities/Login.entity";
 import ILoginRepository from "../repositories/ILoginRepository";
 

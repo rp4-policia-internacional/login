@@ -1,4 +1,4 @@
-import { TipoUsuario } from '@prisma/client';
+import { TipoUsuario } from "@prisma/client";
 
 class LoginEntity {
   id: string;
@@ -7,7 +7,13 @@ class LoginEntity {
   senha: string;
   tipoUsuario: TipoUsuario;
 
-  constructor(id: string, nome: string, email: string, senha: string, tipoUsuario: TipoUsuario) {
+  constructor(
+    id: string,
+    nome: string,
+    email: string,
+    senha: string,
+    tipoUsuario: TipoUsuario
+  ) {
     this.id = id;
     this.nome = nome;
     this.email = email;
