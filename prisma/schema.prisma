@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Login {
+model Cadastro {
   id          String      @id @default(uuid())
   nome        String      @db.VarChar
   email       String      @db.VarChar

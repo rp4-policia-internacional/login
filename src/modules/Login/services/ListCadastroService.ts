@@ -1,6 +1,6 @@
 import { injectable, inject } from "tsyringe";
 
-import ILoginRepository from "../repositories/ILoginRepository";
+import ILoginRepository from "../repositories/ICadastroRepository";
 
 @injectable()
 class ListLoginService {

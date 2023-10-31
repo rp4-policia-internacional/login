@@ -1,6 +1,6 @@
 import { TipoUsuario } from "@prisma/client";
 
-class LoginEntity {
+class CadastroEntity {
   id: string;
   nome: string;
   email: string;
@@ -22,4 +22,4 @@ class LoginEntity {
   }
 }
 
-export default LoginEntity;
+export default CadastroEntity;

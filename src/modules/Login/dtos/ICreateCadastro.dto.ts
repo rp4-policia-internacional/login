@@ -1,7 +1,7 @@
 // ICreateLoginDTO.ts
 import { TipoUsuario } from "@prisma/client";
 
-export default interface ICreateLoginDTO {
+export default interface ICreateCadastroDTO {
   nome: string;
   email: string;
   senha: string;

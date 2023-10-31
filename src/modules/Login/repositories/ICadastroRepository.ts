@@ -1,8 +1,8 @@
-import ICreateLoginDTO from "../dtos/ICreateLogin.dto";
-import LoginEntity from "../entities/Login.entity";
+import ICreateCadastroDTO from "../dtos/ICreateCadastro.dto";
+import LoginEntity from "../entities/Cadastro.entity";
 
-export default interface ILoginRepository {
-  create(data: ICreateLoginDTO): Promise<LoginEntity>;
+export default interface ICadastroRepository {
+  create(data: ICreateCadastroDTO): Promise<LoginEntity>;
   delete(id: string): Promise<void>;
   findById(id: string): Promise<LoginEntity>;
   update(data: LoginEntity): Promise<LoginEntity>;

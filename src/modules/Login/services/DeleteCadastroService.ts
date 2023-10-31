@@ -1,13 +1,12 @@
 import { inject, injectable } from "tsyringe";
 import AppError from "@shared/Errors/AppError";
-import IResgateRepository from "../repositories/ILoginRepository";
-import ILoginRepository from "../repositories/ILoginRepository";
+import ICadastroRepository from "../repositories/ICadastroRepository";
 
 @injectable()
 class DeleteLoginService {
   constructor(
     @inject("LoginRepository")
-    private loginRepository: ILoginRepository
+    private loginRepository: ICadastroRepository
   ) {}
   public async execute(id: string): Promise<void> {
     const findLogin = await this.loginRepository.findById(id);
