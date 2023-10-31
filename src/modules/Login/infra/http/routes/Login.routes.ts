@@ -11,6 +11,5 @@ loginRoutes.delete("/:id", controller.delete);
 loginRoutes.get("/:id", controller.getOne);
 loginRoutes.get("/", controller.getAll);
 loginRoutes.put("/", controller.update);
-loginRoutes.post("/autenticacao", controller.authenticate);
 
 export default loginRoutes;

@@ -7,11 +7,11 @@ import { Request, Response } from "express";
 import { container } from "tsyringe";
 
 import jwt from "jsonwebtoken";
-import AutenticacaoLoginService from "@modules/Login/services/AutenticacaoLoginService";
 
+const SECRET = "token";
 export default class LoginController {
 
-
+  
   public async create(req: Request, res: Response): Promise<Response> {
     const createLogin = container.resolve(CreateLoginService);
 
@@ -23,8 +23,8 @@ export default class LoginController {
       tipoUsuario,
     });
 
-    const token = jwt.sign(createdLogin, "seu_segredo_secreto", {
-      expiresIn: "1h",
+    const token = jwt.sign(createdLogin, SECRET, {
+      expiresIn: "3000",
     });
     console.info(token);
     return res.json({ token });
@@ -77,18 +77,5 @@ export default class LoginController {
       .send("Captura alterada com sucesso");
   }
 
-    public async authenticate(req: Request, res: Response): Promise<Response> {
-      const { email, senha } = req.body;
-      
-      console.log("Email recebido:", email);
-  console.log("Senha recebida:", senha);
-      const autenticacaoLoginService = container.resolve(AutenticacaoLoginService);
   
-      try {
-        const token = await autenticacaoLoginService.authenticate(email, senha);
-        return res.json({ token });
-      } catch (error:any) {
-        return res.status(error.statusCode || 500).json({ error: error.message });
-      }
-    }
 }

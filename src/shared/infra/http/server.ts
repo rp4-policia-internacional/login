@@ -32,12 +32,12 @@ declare global {
 
 
 // Rota protegida
-/*app.get("/recurso_protegido", authenticateToken, (req, res) => {
+app.get("/recurso_protegido", authenticateToken, (req, res) => {
   // Se o token JWT é válido, o middleware permitirá o acesso a esta rota
   // Você pode acessar o usuário autenticado com req.user
   res.json({ mensagem: "Você tem acesso a este recurso protegido" });
 });
-*/
+
 
 
 app.use((err: Error, req: Request, res: Response, _: NextFunction) => {
