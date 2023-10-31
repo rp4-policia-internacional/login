@@ -22,7 +22,7 @@ class LoginService {
     if(user.senha === data.senha){
       
         const token = jwt.sign(user, SECRET, {
-        expiresIn: "3000",
+        expiresIn: "9000",
         });
 
         console.info(token);
